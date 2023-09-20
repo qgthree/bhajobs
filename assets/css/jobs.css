@@ -1,0 +1,137 @@
+/* Civil Service Jobs Page */
+#civil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1100px;
+  min-height: calc(100vh - 300px);
+}
+.civil_left {
+  padding: 30px;
+  text-align: left;
+  background-color: #fff;
+}
+.civil_right {
+  padding: 30px;
+  text-align: left;
+  background-color: #F0EFED;
+}
+
+/* PSC Jobs Page */
+#howtoapply {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+}
+.apply_left {
+  padding: 30px;
+  text-align: left;
+  background-color: #fff;
+}
+.apply_right {
+  padding: 30px;
+  text-align: left;
+  background-color: #CCD5E2;
+}
+
+#email-input {
+  display: inline-block;
+  padding: 0px 10px;
+  border: none;
+  height: 30px;
+  width: 220px;
+  border-radius: 15px;
+  outline: none;
+  margin-bottom: 16px;
+  margin-right: 15px;
+}
+/* PSC Jobs Page,
+and Other BHA Jobs Page */
+.joblist {
+  display: inline-grid;
+  width: 100%;
+  max-width: 1100px;
+  grid-column-gap: 1px;
+  background-color: #d6d6d6;
+  align-self: center;
+}
+.joblist_job {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.job_title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.joblist_job table {
+  width: 100%;
+  border-spacing: 0px;
+}
+
+.joblist_job tr td {
+  text-align: left;
+  vertical-align: top;
+  width: 50%;
+  padding-bottom: 5px;
+}
+.joblist_job .addl_info {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+  /* Civil Service Jobs Page */
+  #civil {
+    display: block
+  }
+  .civil_right {
+    display: none;
+  }
+  /* PSC Jobs Page */
+  .joblist {
+    grid-template-columns: 1fr;
+  }
+  .joblist>.joblist_job:nth-child(even) {
+      background-color: #fff;
+  }
+  .joblist>.joblist_job:nth-child(odd) {
+      background-color: #f5f4f3;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
+  /* PSC Jobs Page */
+  .joblist {
+    grid-template-columns: 1fr 1fr;
+  }
+  .joblist>.joblist_job:nth-child(4n+1),
+  .joblist>.joblist_job:nth-child(4n+2) {
+      background-color: #f5f4f3;
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  /* PSC Jobs Page */
+  #howtoapply {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+  #psc_joblist {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #psc_joblist>.joblist_job:nth-child(6n+1),
+  #psc_joblist>.joblist_job:nth-child(6n+2),
+  #psc_joblist>.joblist_job:nth-child(6n+3) {
+      background-color: #f5f4f3;
+  }
+  /* Other BHA Jobs Page */
+  #other_joblist {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+  }
+  #other_joblist>.joblist_job:nth-child(4n+1),
+  #other_joblist>.joblist_job:nth-child(4n+2) {
+      background-color: #f5f4f3;
+  }
+}
